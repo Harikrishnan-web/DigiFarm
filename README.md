@@ -1,0 +1,1 @@
+So, we planed to particiapte SDG hackathon so we did this project that helps users to buy digital seed and the actual farmers will get that money and grow them in real life so this is the [prototype](https://harikrishnan-web.github.io/DigiFarm/)
