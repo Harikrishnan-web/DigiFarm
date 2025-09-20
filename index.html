@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiFarm - Growing Green, Empowering Farmers</title>
+    <!-- Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .nav-link.active {
+            font-weight: 600;
+            color: #16a34a; /* Tailwind's green-600 */
+        }
+        .custom-gradient {
+            background: linear-gradient(to right, #22c55e, #16a34a); /* Tailwind green-500 to green-600 */
+        }
+        .btn-primary {
+            @apply bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 hover:bg-green-700;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-2xl;
+        }
+        .card-icon {
+            @apply w-12 h-12 text-green-600 mb-4;
+        }
+        .section-header {
+            @apply text-4xl sm:text-5xl font-extrabold text-green-800 text-center mb-12 leading-tight;
+        }
+        .un-sdg-card {
+            @apply flex flex-col items-center text-center p-6 bg-green-50 rounded-xl shadow-md transition-transform transform hover:scale-105;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo/Brand -->
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-green-600 font-bold text-2xl">DigiFarm</span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="nav-link text-gray-700 transition-colors hover:text-green-600" data-page="home">Home</a>
+                <a href="#digifarmer" class="nav-link text-gray-700 transition-colors hover:text-green-600" data-page="digifarmer">DigiFarmer</a>
+                <a href="#farmer" class="nav-link text-gray-700 transition-colors hover:text-green-600" data-page="farmer">Farmer</a>
+                <a href="#about-us" class="nav-link text-gray-700 transition-colors hover:text-green-600" data-page="about-us">About Us</a>
+                <a href="#contact" class="nav-link text-gray-700 transition-colors hover:text-green-600" data-page="contact">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner pb-4">
+            <div class="flex flex-col items-start px-4 space-y-2">
+                <a href="#home" class="nav-link block px-3 py-2 text-gray-700 hover:bg-gray-100 w-full rounded-md" data-page="home">Home</a>
+                <a href="#digifarmer" class="nav-link block px-3 py-2 text-gray-700 hover:bg-gray-100 w-full rounded-md" data-page="digifarmer">DigiFarmer</a>
+                <a href="#farmer" class="nav-link block px-3 py-2 text-gray-700 hover:bg-gray-100 w-full rounded-md" data-page="farmer">Farmer</a>
+                <a href="#about-us" class="nav-link block px-3 py-2 text-gray-700 hover:bg-gray-100 w-full rounded-md" data-page="about-us">About Us</a>
+                <a href="#contact" class="nav-link block px-3 py-2 text-gray-700 hover:bg-gray-100 w-full rounded-md" data-page="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container mx-auto px-4 py-8 sm:py-16">
+        
+        <!-- Home Page -->
+        <section id="home" class="page-section active">
+            <!-- Hero Section -->
+            <div class="text-center py-16 sm:py-24 max-w-4xl mx-auto">
+                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight text-green-800 tracking-tighter">
+                    DigiFarm: <br>Growing Green, Empowering Farmers
+                </h1>
+                <p class="mt-4 text-xl sm:text-2xl text-gray-600 font-medium">
+                    Invest in digital, harvest in reality, impact the planet.
+                </p>
+            </div>
+
+            <!-- Why, What, How, Features Sections -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center my-16">
+                <!-- WHY Section -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full"><path d="M12 1a8 8 0 0 0-8 8c0 5 4 9 8 9s8-4 8-9a8 8 0 0 0-8-8zm0 14a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"/><path d="M12 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-green-800 mb-2">Why DigiFarm?</h2>
+                    <p class="text-gray-600 text-lg max-w-prose">
+                        DigiFarm connects people to the land, allowing them to invest in real-world agricultural projects through a transparent and sustainable digital platform. We bridge the gap between urban investors and rural farmers, fostering a new era of eco-conscious investment.
+                    </p>
+                </div>
+                
+                <!-- WHAT Section -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/><path d="M12 6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h4a1 1 0 0 0 0-2h-3V7a1 1 0 0 0-1-1z"/></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-green-800 mb-2">What We Do</h2>
+                    <p class="text-gray-600 text-lg max-w-prose">
+                        We offer a marketplace of digital assets—seeds, trees, and crops—that represent tangible investments in farming and reforestation. By purchasing these, you provide direct funding to farmers, enabling them to grow, harvest, and restore land.
+                    </p>
+                </div>
+
+                <!-- HOW Section -->
+                <div class="flex flex-col items-center text-center mt-8">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm-1 16V10h2v8h-2zm-1-8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-green-800 mb-2">How It Works</h2>
+                    <p class="text-gray-600 text-lg max-w-prose">
+                        1. **Invest:** Select and purchase a digital seed or crop from our marketplace. 2. **Grow:** Your funds are directly allocated to a farmer, who plants and nurtures the real asset. 3. **Track:** Follow the progress with real-time updates and photos. 4. **Harvest:** When the crop is harvested, you receive a share of the profits.
+                    </p>
+                </div>
+                
+                <!-- FEATURES Section -->
+                <div class="flex flex-col items-center text-center mt-8">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M12 6a1 1 0 0 0-1 1v4h-4a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0v-4h4a1 1 0 0 0 0-2h-4V7a1 1 0 0 0-1-1z"/></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-green-800 mb-2">Key Features</h2>
+                    <ul class="text-gray-600 text-lg list-disc list-inside max-w-prose">
+                        <li>Transparent Fund Allocation</li>
+                        <li>Real-time Progress Tracking</li>
+                        <li>Profit Sharing Model</li>
+                        <li>Sustainability Impact Metrics</li>
+                        <li>Farmer-to-Investor Connection</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- UN SDGs Section -->
+            <div class="my-24">
+                <h2 class="section-header">Our Commitment to a Better World</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- SDG 1: Partnerships -->
+                    <div class="un-sdg-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-16 h-16 text-blue-600 mb-4"><path d="M12 2A10 10 0 1 0 22 12 10.011 10.011 0 0 0 12 2zm-1 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M12 6a1 1 0 0 0-1 1v4h-4a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0v-4h4a1 1 0 0 0 0-2h-4V7a1 1 0 0 0-1-1z"/></svg>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Partnerships for the Goals</h3>
+                        <p class="text-gray-600 text-base">
+                            We build strong, trust-based partnerships between investors and farmers, creating a powerful network for sustainable development.
+                        </p>
+                    </div>
+                    <!-- SDG 2: Life on Land -->
+                    <div class="un-sdg-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-16 h-16 text-lime-600 mb-4"><path d="M12 2A10 10 0 1 0 22 12 10.011 10.011 0 0 0 12 2zm-1 16V10h2v8h-2zm-1-8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Life on Land</h3>
+                        <p class="text-gray-600 text-base">
+                            Through our reforestation projects, we support the restoration of degraded land and the conservation of biodiversity.
+                        </p>
+                    </div>
+                    <!-- SDG 3: Climate Action -->
+                    <div class="un-sdg-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-16 h-16 text-red-600 mb-4"><path d="M12 2A10 10 0 1 0 22 12 10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M12 6a1 1 0 0 0-1 1v4h-4a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0v-4h4a1 1 0 0 0 0-2h-4V7a1 1 0 0 0-1-1z"/></svg>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Climate Action</h3>
+                        <p class="text-gray-600 text-base">
+                            By funding sustainable agriculture and tree planting, we contribute directly to reducing carbon emissions and fighting climate change.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center my-24 py-16 custom-gradient rounded-xl shadow-lg">
+                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">Ready to make an impact?</h2>
+                <a href="#" class="btn-primary">Join DigiFarm Today</a>
+            </div>
+        </section>
+
+        <!-- DigiFarmer Page (User Page) -->
+        <section id="digifarmer" class="page-section hidden">
+            <h1 class="section-header">DigiFarmer: Your Marketplace</h1>
+
+            <!-- Marketplace -->
+            <div class="my-12">
+                <h2 class="text-3xl font-bold text-green-700 mb-8 text-center">Digital Assets for Investment</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Small Seed Card -->
+                    <div class="card flex flex-col items-center text-center">
+                        <img src="https://placehold.co/200x200/a3e635/16a34a?text=Small+Seed" alt="Small Digital Seed" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                        <h3 class="text-2xl font-bold text-green-800 mb-2">Small Seed</h3>
+                        <p class="text-lg text-gray-600 font-semibold mb-2">₹500</p>
+                        <p class="text-sm text-gray-500 mb-4">A starter investment for a micro-harvest.</p>
+                        <button class="btn-primary w-full">Buy Now</button>
+                    </div>
+                    <!-- Small Crop Card -->
+                    <div class="card flex flex-col items-center text-center">
+                        <img src="https://placehold.co/200x200/84cc16/16a34a?text=Small+Crop" alt="Small Digital Crop" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                        <h3 class="text-2xl font-bold text-green-800 mb-2">Small Crop</h3>
+                        <p class="text-lg text-gray-600 font-semibold mb-2">₹2,500</p>
+                        <p class="text-sm text-gray-500 mb-4">A small package to fund a crop mini-cycle.</p>
+                        <button class="btn-primary w-full">Buy Now</button>
+                    </div>
+                    <!-- Small Tree Card -->
+                    <div class="card flex flex-col items-center text-center">
+                        <img src="https://placehold.co/200x200/4ade80/16a34a?text=Small+Tree" alt="Small Digital Tree" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                        <h3 class="text-2xl font-bold text-green-800 mb-2">Small Tree</h3>
+                        <p class="text-lg text-gray-600 font-semibold mb-2">₹1,000</p>
+                        <p class="text-sm text-gray-500 mb-4">A low-cost way to invest in a single tree and our planet.</p>
+                        <button class="btn-primary w-full">Buy Now</button>
+                    </div>
+                    <!-- Digital Seed Card -->
+                    <div class="card flex flex-col items-center text-center">
+                        <img src="https://placehold.co/200x200/a3e635/16a34a?text=Digital+Seed" alt="Digital Seed" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                        <h3 class="text-2xl font-bold text-green-800 mb-2">Digital Seed</h3>
+                        <p class="text-lg text-gray-600 font-semibold mb-2">₹5,000</p>
+                        <p class="text-sm text-gray-500 mb-4">A standard investment for a big harvest.</p>
+                        <button class="btn-primary w-full">Buy Now</button>
+                    </div>
+                    <!-- Digital Crop Card -->
+                    <div class="card flex flex-col items-center text-center">
+                        <img src="https://placehold.co/200x200/84cc16/16a34a?text=Digital+Crop" alt="Digital Crop" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                        <h3 class="text-2xl font-bold text-green-800 mb-2">Digital Crop</h3>
+                        <p class="text-lg text-gray-600 font-semibold mb-2">₹25,000</p>
+                        <p class="text-sm text-gray-500 mb-4">Fund a full harvest cycle from planting to sale.</p>
+                        <button class="btn-primary w-full">Buy Now</button>
+                    </div>
+                    <!-- Digital Tree Card -->
+                    <div class="card flex flex-col items-center text-center">
+                        <img src="https://placehold.co/200x200/4ade80/16a34a?text=Digital+Tree" alt="Digital Tree" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                        <h3 class="text-2xl font-bold text-green-800 mb-2">Digital Tree</h3>
+                        <p class="text-lg text-gray-600 font-semibold mb-2">₹10,000</p>
+                        <p class="text-sm text-gray-500 mb-4">A long-term investment in reforestation and the planet.</p>
+                        <button class="btn-primary w-full">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Dashboard -->
+            <div class="my-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-8 text-center">Your DigiFarm Dashboard</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Purchased Assets -->
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-4">Your Purchased Assets</h3>
+                        <ul class="space-y-4">
+                            <li class="p-4 bg-gray-100 rounded-lg flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-bold text-gray-700">2x Digital Seeds</h4>
+                                    <p class="text-sm text-gray-500">Projected Return: 15%</p>
+                                </div>
+                                <button class="bg-gray-200 text-gray-600 py-1 px-4 rounded-full text-sm">View</button>
+                            </li>
+                            <li class="p-4 bg-gray-100 rounded-lg flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-bold text-gray-700">1x Digital Tree</h4>
+                                    <p class="text-sm text-gray-500">Projected Return: 12%</p>
+                                </div>
+                                <button class="bg-gray-200 text-gray-600 py-1 px-4 rounded-full text-sm">View</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Sustainability Tracking -->
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-4">Sustainability Impact</h3>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-green-100 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-green-600">5.2T</p>
+                                <p class="text-sm text-gray-600">CO₂ Saved</p>
+                            </div>
+                            <div class="bg-green-100 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-green-600">10</p>
+                                <p class="text-sm text-gray-600">Trees Planted</p>
+                            </div>
+                            <div class="bg-green-100 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-green-600">15</p>
+                                <p class="text-sm text-gray-600">Crops Funded</p>
+                            </div>
+                            <div class="bg-green-100 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-green-600">₹500</p>
+                                <p class="text-sm text-gray-600">Profit-Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Farmer Page -->
+        <section id="farmer" class="page-section hidden">
+            <h1 class="section-header">Farmer Dashboard</h1>
+            
+            <!-- Financials Section -->
+            <div class="my-12">
+                <h2 class="text-3xl font-bold text-green-700 mb-8 text-center">Your DigiFarm Finances</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-4">Received Funds</h3>
+                        <p class="text-4xl font-bold text-green-600 mb-2">₹52,500</p>
+                        <p class="text-sm text-gray-500">Total funds received from DigiFarmer users.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-4">Transparent Allocation</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>**75%** - Physical Seeds & Supplies</li>
+                            <li>**15%** - Labor & Maintenance</li>
+                            <li>**10%** - Sustainability Initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Gallery -->
+            <div class="my-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-8 text-center">Your Progress Gallery</h2>
+                <div class="card p-6 mb-8">
+                    <h3 class="text-xl font-semibold text-green-800 mb-4">Upload New Photos</h3>
+                    <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <input type="file" id="photo-upload" class="flex-grow p-2 border border-gray-300 rounded-lg">
+                        <button class="btn-primary w-full sm:w-auto">Upload Photo</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="rounded-xl overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+                        <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Progress+Photo+1" alt="Crop progress" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+                        <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Progress+Photo+2" alt="Crop progress" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+                        <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Progress+Photo+3" alt="Crop progress" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+                        <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Progress+Photo+4" alt="Crop progress" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profit Distribution Section -->
+            <div class="my-16">
+                <div class="card text-center p-8 bg-green-50">
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Profit Distribution</h3>
+                    <p class="text-gray-600 text-lg">
+                        All profits from your harvest are distributed transparently and directly to you, the farmer. You can track all earnings and profit-sharing information here.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us Page -->
+        <section id="about-us" class="page-section hidden">
+            <h1 class="section-header">About Us</h1>
+            <div class="max-w-prose mx-auto text-gray-600 text-lg space-y-6">
+                <p>
+                    DigiFarm was founded on the principle that technology can be a powerful tool for environmental and social change. We are a team of passionate technologists, farmers, and environmental advocates committed to creating a platform that is not only profitable but also deeply impactful. Our mission is to democratize investment in sustainable agriculture and provide a reliable, transparent source of income for farmers around the globe.
+                </p>
+                <p>
+                    By bridging the gap between those who want to invest in a greener future and those who work the land, we are cultivating a community centered on growth, trust, and shared success. Every digital seed you buy is a real seed planted, and every tree you fund is a step toward a healthier planet.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page-section hidden">
+            <h1 class="section-header">Contact Us</h1>
+            <div class="max-w-prose mx-auto text-center text-gray-600 text-lg space-y-6">
+                <p>
+                    Have questions? We'd love to hear from you. Please reach out to us at <a href="mailto:info@digifarm.com" class="text-green-600 font-bold hover:underline">info@digifarm.com</a> or use the form below.
+                </p>
+                <form class="space-y-6 text-left">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-lg mb-2 text-white">SDG Goals</h4>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline">Partnerships</a></li>
+                        <li><a href="#" class="hover:underline">Life on Land</a></li>
+                        <li><a href="#" class="hover:underline">Climate Action</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Resources</h4>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline">Our Sustainability</a></li>
+                        <li><a href="#" class="hover:underline">Our Mission</a></li>
+                        <li><a href="#" class="hover:underline">Impact Reports</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Founding Members</h4>
+                    <ul class="space-y-1">
+                        <li>Harikrishnan (Team leader)</li>
+                        <li>Girijan (Developer)</li>
+                        <li>Avanindth (Back end)</li>
+                        <li>Akshay (Designer)</li>
+                        <li>Jeeva (Adviser)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 DigiFarm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageSections = document.querySelectorAll('.page-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Function to show a specific page and update active link
+            const showPage = (pageId) => {
+                // Hide all pages
+                pageSections.forEach(section => {
+                    section.classList.add('hidden');
+                    section.classList.remove('active');
+                });
+                // Show the requested page
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                    targetPage.classList.add('active');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+                
+                // Remove active class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                // Add active class to the corresponding link
+                const activeLink = document.querySelector(`.nav-link[data-page="${pageId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            };
+
+            // Set initial page to home and active link
+            showPage('home');
+
+            // Add click listeners to nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = e.target.getAttribute('data-page');
+                    showPage(pageId);
+                    // Hide mobile menu after selection
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Toggle mobile menu visibility
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
