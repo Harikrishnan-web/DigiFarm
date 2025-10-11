@@ -2,7 +2,7 @@
 
 ## 🧰 **Prerequisites**
 
-You need:
+You need
 
 1. A **remote server** (e.g., AWS EC2, DigitalOcean Droplet, etc.)
 2. Your **private SSH key (`.ppk`)** — for PuTTY authentication
